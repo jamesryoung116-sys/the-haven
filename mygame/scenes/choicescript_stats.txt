@@ -1,0 +1,2 @@
+Chapter: ${chapter}
+Village Progress: ${village_progress}

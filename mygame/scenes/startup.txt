@@ -1,0 +1,11 @@
+*title The Haven
+*author Jry78
+
+*create chapter 1
+*create village_progress 10
+
+Loading your story...
+
+*script loadGame("TEST").then(function(data){if(data){stats.chapter=data.chapter;stats.village_progress=data.village_progress;} nav.gotoScene("chapter1");});
+
+*finish

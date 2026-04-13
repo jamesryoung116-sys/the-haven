@@ -1,0 +1,9 @@
+Your story code is:
+
+${chapter}|${village_progress}
+
+Write this down or send it to someone.
+
+*choice
+  #Back
+    *goto_scene startup

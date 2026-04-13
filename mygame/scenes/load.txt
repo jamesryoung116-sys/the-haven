@@ -1,0 +1,11 @@
+Enter your story code.
+
+*choice
+  #1|10 (example)
+    *set chapter 1
+    *set village_progress 10
+    Code loaded!
+    *goto_scene chapter1
+
+  #Cancel
+    *goto_scene startup

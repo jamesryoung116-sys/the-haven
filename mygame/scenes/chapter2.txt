@@ -1,0 +1,9 @@
+*set village_progress +10
+
+*script saveGame("TEST", {chapter: stats.chapter, village_progress: stats.village_progress});
+
+This is Chapter ${chapter}.
+
+Village progress is ${village_progress}.
+
+*finish
