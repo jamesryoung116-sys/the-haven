@@ -2,10 +2,19 @@ This is Chapter ${chapter}.
 
 The Haven is a place Great Elves for troubled humans to escape, learn, and perhaps do great deeds.
 
-*set luna_intelligence %+10
-
-*page_break
-
-You are getting smart
+*label c1_choice
 *choice
-  #testing.
+    #Set village progress to zero
+        *set village_progress 0
+        *goto c1_choice
+    #Get smart!
+        *if pc = "luna"
+            *set luna_intelligence %+10
+            *goto c2_choice
+        *if pc = "kiki"
+            *set kiki_intelligence %+10
+            *goto c2_choice
+*label c2_choice
+WOW — you are smart.
+*page_break
+*goto c1_choice
