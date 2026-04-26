@@ -49,4 +49,4 @@ Who will change and explore the Haven?
         *goto_scene load_scene
     #Kiki: A curious, restless girl.
         *set pc "kiki"
-        *goto_scene load_scene
+        *goto_scene chapter1
