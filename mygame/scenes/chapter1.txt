@@ -1,10 +1,20 @@
 This is Chapter ${chapter}.
 
-Village progress is ${village_progress}.
+The Haven is a place Great Elves for troubled humans to escape, learn, and perhaps do great deeds.
 
+*label c1_choice
 *choice
-  #Help the village
-    *set village_progress +10
-    *script saveGame("TEST",{chapter:stats.chapter,village_progress:stats.village_progress});
-    You help the village grow.
-    *finish
+    #Set village progress to zero
+        *set village_progress 0
+        *goto c1_choice
+    #Get smart!
+        *if pc = "luna"
+            *set luna_intelligence %+10
+            *goto c2_choice
+        *if pc = "kiki"
+            *set kiki_intelligence %+10
+            *goto c2_choice
+*label c2_choice
+WOW — you are smart.
+*page_break
+*goto c1_choice
