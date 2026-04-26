@@ -31,6 +31,10 @@ Welcome to the Haven, a magical world:
         *comment a game for Andre
         *set story_code "AndreWillow"
         *goto char
+    #anothertest
+        *set story_code "anothertest"
+        *goto char
+
 
 *label char
 The path is quiet.
