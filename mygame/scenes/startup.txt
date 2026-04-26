@@ -3,9 +3,46 @@
 
 *create chapter 1
 *create village_progress 10
+*create story_code "HAVEN-123"
 
-Loading your story...
+*create pc ""
+*create role ""
 
-*script loadGame("TEST").then(function(data){if(data){stats.chapter=data.chapter;stats.village_progress=data.village_progress;} nav.gotoScene("chapter1");});
+*create luna_present 0
+*create luna_intelligence 30
+*create luna_strength 25
+*create luna_charm 20
+*create kiki_present 0
+*create kiki_intelligence 25
+*create kiki_strength 25
+*create kiki_charm 30
 
-*finish
+Welcome to the Haven, a magical world:
+*choice
+    #HAVEN-123"
+        *comment a default story-code for testing
+        *set story_code "HAVEN-123"
+        *goto char
+    #FreddieArthur
+        *comment a game for freddy
+        *set story_code "FreddieArthur"
+        *goto char
+    #AndreWillow
+        *comment a game for Andre
+        *set story_code "AndreWillow"
+        *goto char
+
+*label char
+The path is quiet.
+
+Beyond it lies the Haven: A magical refuge for children in need.
+
+Who will change and explore the Haven?
+
+*choice
+    #Luna: A quiet, observant girl.
+        *set pc "luna"
+        *goto_scene load_scene
+    #Kiki: A curious, restless girl.
+        *set pc "kiki"
+        *goto_scene load_scene
