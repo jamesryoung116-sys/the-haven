@@ -1,2 +1,20 @@
+*label statsbegin
 Chapter: ${chapter}
 Village Progress: ${village_progress}
+
+Current Character: $!{pc}.
+
+Luna Intel: ${luna_intelligence}.
+Kiki Intel: ${kiki_intelligence}.
+
+
+*choice
+    #SAVE
+        *goto savegame
+*label savegame
+*script saveGame(stats.story_code,{chapter: stats.chapter, village_progress: stats.village_progress, characters: {luna: {intelligence: stats.luna_intelligence, strength: stats.luna_strength, charm: stats.luna_charm, present: stats.luna_present}, kiki: {intelligence: stats.kiki_intelligence, strength: stats.kiki_strength, charm: stats.kiki_charm, present: stats.kiki_present}}});
+
+Gave saved!
+*page_break Next
+*goto statsbegin
+
