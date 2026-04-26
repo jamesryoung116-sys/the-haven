@@ -1,5 +1,5 @@
 Loading the Haven...
 
-*script loadGame(stats.story_code).then(function(data){if(data&&data.characters){stats.luna_intelligence=data.characters.luna?.intelligence||0;stats.luna_strength=data.characters.luna?.strength||0;stats.luna_charm=data.characters.luna?.charm||0;stats.kiki_intelligence=data.characters.kiki?.intelligence||0;stats.kiki_strength=data.characters.kiki?.strength||0;stats.kiki_charm=data.characters.kiki?.charm||0;}});
+*comment *script loadGame(stats.story_code).then(function(data){if(data&&data.characters){stats.luna_intelligence=data.characters.luna?.intelligence||0;stats.luna_strength=data.characters.luna?.strength||0;stats.luna_charm=data.characters.luna?.charm||0;stats.kiki_intelligence=data.characters.kiki?.intelligence||0;stats.kiki_strength=data.characters.kiki?.strength||0;stats.kiki_charm=data.characters.kiki?.charm||0;}});
 
 *goto_scene chapter1
