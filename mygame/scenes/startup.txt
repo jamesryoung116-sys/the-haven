@@ -21,7 +21,7 @@ Welcome to the Haven, a magical world:
 *choice
     #HAVEN-123
         *comment a default story-code for testing
-        *set story_code "HAVEN-123"
+        *set story_code "HAVEN-123
         *goto char
     #FreddieArthur
         *comment a game for freddy
