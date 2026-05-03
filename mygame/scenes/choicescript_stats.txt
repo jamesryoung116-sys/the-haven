@@ -4,17 +4,38 @@ Village Progress: ${village_progress}
 
 Current Character: $!{pc}.
 
-Luna Intel: ${luna_intelligence}.
-Kiki Intel: ${kiki_intelligence}.
+*if pc = "luna"
+    Luna
+    *stat_chart
+        percent luna_int
+        percent luna_str
+        percent luna_cha
+        
+*if pc = "kiki"
+    Kiki
+    *stat_chart
+        percent kiki_int
+        percent kiki_str
+        percent kiki_cha
+
+*if pc = "ruyan"
+    Ruyan
+    *stat_chart
+        percent kiki_int
+        percent kiki_str
+        percent kiki_cha
 
 
+*label savechoice
 *choice
     #SAVE
         *goto savegame
 *label savegame
-*script saveGame(stats.story_code,{chapter: stats.chapter, village_progress: stats.village_progress, characters: {luna: {intelligence: stats.luna_intelligence, strength: stats.luna_strength, charm: stats.luna_charm, present: stats.luna_present}, kiki: {intelligence: stats.kiki_intelligence, strength: stats.kiki_strength, charm: stats.kiki_charm, present: stats.kiki_present}}});
+*comment 
+*script saveGame(stats.story_code,{characters:{luna:{present:stats.luna_present,int:stats.luna_int,str:stats.luna_str,cha:stats.luna_cha},kiki:{present:stats.kiki_present,int:stats.kiki_int,str:stats.kiki_str,cha:stats.kiki_cha},ruyan:{present:stats.ruyan_present,int:stats.ruyan_int,str:stats.ruyan_str,cha:stats.ruyan_cha}}});
 
 Gave saved!
 *page_break Next
 *goto statsbegin
+
 

@@ -1,0 +1,90 @@
+*label genboy
+*set he "he"
+*set him "him"
+*set his "his"
+*set boy "boy"
+*return
+
+*label genneutral
+*set he "they"
+*set him "them"
+*set his "their"
+*set boy "kid"
+*return
+
+*label gengirl
+*set he "she"
+*set him "her"
+*set his "her"
+*set boy "girl"
+*return
+
+*label increase_int
+
+*if (pc = "luna")
+  *set luna_int %+5
+  *return
+*elseif (pc = "kiki")
+  *set kiki_int %+5
+  *return
+*elseif (pc = "ruyan")
+  *set ruyan_int %+5
+  *return
+
+*label increase_str
+
+*if (pc = "luna")
+  *set luna_str %+5
+  *return
+*elseif (pc = "kiki")
+  *set kiki_str %+5
+  *return
+*elseif (pc = "ruyan")
+  *set ruyan_str %+5
+  *return
+
+*label increase_cha
+*if (pc = "luna")
+  *set luna_cha %+5
+  *return
+*elseif (pc = "kiki")
+  *set kiki_cha %+5
+  *return
+*elseif (pc = "ruyan")
+  *set ruyan_cha %+5
+  *return
+
+*label decrease_int
+
+*if (pc = "luna")
+  *set luna_int %-5
+  *return
+*elseif (pc = "kiki")
+  *set kiki_int %-5
+  *return
+*elseif (pc = "ruyan")
+  *set ruyan_int %-5
+  *return
+
+*label decrease_str
+
+*if (pc = "luna")
+  *set luna_str %-5
+  *return
+*elseif (pc = "kiki")
+  *set kiki_str %-5
+  *return
+*elseif (pc = "ruyan")
+  *set ruyan_str %-5
+  *return
+
+*label decrease_cha
+*if (pc = "luna")
+  *set luna_cha %-5
+  *return
+*elseif (pc = "kiki")
+  *set kiki_cha %-5
+  *return
+*elseif (pc = "ruyan")
+  *set ruyan_cha %-5
+  *return

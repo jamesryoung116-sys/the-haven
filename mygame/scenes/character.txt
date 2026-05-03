@@ -1,0 +1,35 @@
+The path is quiet.
+
+Beyond it lies the Haven: A magical refuge for children in need.
+
+Who will change and explore the Haven?
+
+*choice
+    #Luna: A quiet, observant human girl.
+        *set pc "luna"
+        *gosub_scene utils gengirl
+        *goto_scene load_scene
+    #Kiki: A curious, restless dryad girl.
+        *set pc "kiki"
+        *gosub_scene utils gengirl
+        *goto_scene load_scene
+    #Ruyan: A strong satyr boy.
+        *set pc "ruyan"
+        *gosub_scene utils genboy
+        *goto_scene load_scene
+    #A teacher (this is for adults playing the game with kids).
+        *set role "teacher"
+        *set rcode 1
+        *choice
+            #TEACHER,  Grem the Hunter, an elf warrior.
+                *set pc "grem"
+                *set role "teacher" 
+                *goto_scene load_scene
+            #TEACHER, Morgan the Sorceress, a witch of the woods.
+                *set pc "morgan"
+                *set role "teacher"
+                *goto_scene load_scene
+            #TEACHER, Sun Wukong, a red-eyed monkey and Great Sage.
+                *set pc "wukong"
+                *set role "teacher"
+                *goto_scene load_scene

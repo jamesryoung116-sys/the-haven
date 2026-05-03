@@ -1,0 +1,18 @@
+
+Welcome to the Haven, a magical world:
+*choice
+    #HAVEN-123
+        *comment a default story-code for testing
+        *set story_code "HAVEN-123"
+        *goto char
+    #FreddieArthur
+        *comment a game for freddy
+        *set story_code "FreddieArthur"
+        *goto char
+    #AndreWillow
+        *comment a game for Andre
+        *set story_code "AndreWillow"
+        *goto char
+
+*label char
+*goto_scene character

@@ -1,20 +1,46 @@
 This is Chapter ${chapter}.
 
-The Haven is a place Great Elves for troubled humans to escape, learn, and perhaps do great deeds.
+The Haven is a refuge, made by Great Elves. At the Haven, children are safe can explore and learn to fend for themselves.
 
+*if (kiki_present > 0) and (pc != "kiki")
+    [b]Kiki[/b] the dryad is holding two staffs. "Nice for you to join us $!{pc}! Would you like to practice sparing! I'm tired of practicing on my own."
+    
+    *goto c1_choice
+*if (luna_present > 0) and (pc != "luna")
+    [b]Luna[/b] the witch girl, is deep in concentration starring at a flower. She is surprised to see you arrive. "Ohh hi  $!{pc}… This flower I think has great magical properties."
+    
+    *goto c1_choice
+*if (ruyan_present > 0) and (pc != "luna")
+    [b]Ruyan[/b] the Satyr boy is struggling with a scroll, his brow furrowed. "Hey $!{pc}. Master Shen gave me this scroll to copy, but it makes no sense to me."
+    
+    *goto c1_choice
 *label c1_choice
+*if role = "student"
+    *goto studentchoice
+*else
+    *goto teacherchoice
+*label studentchoice
 *choice
     #Set village progress to zero
         *set village_progress 0
         *goto c1_choice
     #Get smart!
-        *if pc = "luna"
-            *set luna_intelligence %+10
-            *goto c2_choice
-        *if pc = "kiki"
-            *set kiki_intelligence %+10
-            *goto c2_choice
+        *gosub_scene utils increase_int
+        WOW — you are smart.
+        *goto c2_choice
+    #Get strong!
+        *gosub_scene utils increase_str
+        WOW — you are strong.
+        *goto c2_choice
+    #Get charming!
+        *gosub_scene utils increase_cha
+        WOW — you are charming.
+        *goto c2_choice
 *label c2_choice
-WOW — you are smart.
 *page_break
 *goto c1_choice
+
+*label teacherchoice
+[b]ATTENTION[/b]
+Teacher profiles are not yet set up!
+*goto_scene character

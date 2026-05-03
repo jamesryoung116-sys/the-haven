@@ -1,5 +1,6 @@
 Loading the Haven...
 
-*script loadGame(stats.story_code).then(function(data){if(data&&data.characters){stats.luna_intelligence=(data.characters.luna&&data.characters.luna.intelligence)||0;stats.luna_strength=(data.characters.luna&&data.characters.luna.strength)||0;stats.luna_charm=(data.characters.luna&&data.characters.luna.charm)||0;stats.kiki_intelligence=(data.characters.kiki&&data.characters.kiki.intelligence)||0;stats.kiki_strength=(data.characters.kiki&&data.characters.kiki.strength)||0;stats.kiki_charm=(data.characters.kiki&&data.characters.kiki.charm)||0;}});
+*comment 
+*script loadGame(stats.story_code).then(function(data){if(data&&data.characters){stats.luna_present=(data.characters.luna&&data.characters.luna.present)||0;stats.luna_int=(data.characters.luna&&data.characters.luna.int)||0;stats.luna_str=(data.characters.luna&&data.characters.luna.str)||0;stats.luna_cha=(data.characters.luna&&data.characters.luna.cha)||0;stats.kiki_present=(data.characters.kiki&&data.characters.kiki.present)||0;stats.kiki_int=(data.characters.kiki&&data.characters.kiki.int)||0;stats.kiki_str=(data.characters.kiki&&data.characters.kiki.str)||0;stats.kiki_cha=(data.characters.kiki&&data.characters.kiki.cha)||0;stats.ruyan_present=(data.characters.ruyan&&data.characters.ruyan.present)||0;stats.ruyan_int=(data.characters.ruyan&&data.characters.ruyan.int)||0;stats.ruyan_str=(data.characters.ruyan&&data.characters.ruyan.str)||0;stats.ruyan_cha=(data.characters.ruyan&&data.characters.ruyan.cha)||0;}});
 
 *goto_scene chapter1

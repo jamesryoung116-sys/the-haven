@@ -1,0 +1,32 @@
+Warning: this will wipe out all save metrics.
+
+*choice
+    #I understand.
+        *goto reset
+    #Reconsider
+        *return
+    
+*label
+*set chapter 1
+*set village_progress 10
+
+*set pc ""
+*set role ""
+*set he "she"
+*set him "her"
+*set his "her"
+*set boy "girl"
+
+*set luna_present 0
+*set luna_int 30
+*set luna_str 20
+*set luna_cha 25
+*set kiki_present 0
+*set kiki_int 25
+*set kiki_str 25
+*set kiki_cha 30
+*set ruyan_present 0
+*set ruyan_int 20
+*set ruyan_str 30
+*set ruyan_cha 20
+*goto_scene storyandchar

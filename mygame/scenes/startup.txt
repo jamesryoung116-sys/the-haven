@@ -6,47 +6,25 @@
 *create story_code "HAVEN-123"
 
 *create pc ""
-*create role ""
+*create rcode 0
+*create role "student"
+*comment 0 = "student", 1 = teacher
+*create he "she"
+*create him "her"
+*create his "her"
+*create boy "girl"
 
 *create luna_present 0
-*create luna_intelligence 30
-*create luna_strength 25
-*create luna_charm 20
+*create luna_int 30
+*create luna_str 20
+*create luna_cha 25
 *create kiki_present 0
-*create kiki_intelligence 25
-*create kiki_strength 25
-*create kiki_charm 30
+*create kiki_int 25
+*create kiki_str 25
+*create kiki_cha 30
+*create ruyan_present 0
+*create ruyan_int 20
+*create ruyan_str 30
+*create ruyan_cha 20
 
-Welcome to the Haven, a magical world:
-*choice
-    #HAVEN-123
-        *comment a default story-code for testing
-        *set story_code "HAVEN-123"
-        *goto char
-    #FreddieArthur
-        *comment a game for freddy
-        *set story_code "FreddieArthur"
-        *goto char
-    #AndreWillow
-        *comment a game for Andre
-        *set story_code "AndreWillow"
-        *goto char
-    #anothertest
-        *set story_code "anothertest"
-        *goto char
-
-
-*label char
-The path is quiet.
-
-Beyond it lies the Haven: A magical refuge for children in need.
-
-Who will change and explore the Haven?
-
-*choice
-    #Luna: A quiet, observant girl.
-        *set pc "luna"
-        *goto_scene load_scene
-    #Kiki: A curious, restless girl.
-        *set pc "kiki"
-        *goto_scene chapter1
+*goto_scene storyandchar
