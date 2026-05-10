@@ -44,7 +44,7 @@ Warning: this will wipe out all save metrics.
 
 *choice
     #I understand.
-        *goto reset
+        *goto reset2
     #Reconsider
         *return
         
