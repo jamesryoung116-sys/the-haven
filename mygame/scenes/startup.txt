@@ -2,7 +2,7 @@
 *author Jry78
 
 *create chapter 1
-*create village_progress 10
+*create village_progress 0
 *create story_code "HAVEN-123"
 
 *create pc ""

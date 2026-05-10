@@ -5,7 +5,7 @@ Beyond it lies the Haven: A magical refuge for children in need.
 Who will change and explore the Haven?
 
 *choice
-    #Luna: A quiet, observant human girl.
+    #Luna: A quiet, observant human girl who transforms into a cat.
         *set pc "luna"
         *gosub_scene utils gengirl
         *goto_scene load_scene
