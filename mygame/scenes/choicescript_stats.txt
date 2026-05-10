@@ -33,7 +33,7 @@ Current Character: $!{pc}.
     #Reset
         *goto reset1
 *label savegame
-*comment *script saveGame(stats.story_code,{characters:{luna:{present:stats.luna_present,int:stats.luna_int,str:stats.luna_str,cha:stats.luna_cha},kiki:{present:stats.kiki_present,int:stats.kiki_int,str:stats.kiki_str,cha:stats.kiki_cha},ruyan:{present:stats.ruyan_present,int:stats.ruyan_int,str:stats.ruyan_str,cha:stats.ruyan_cha}}});
+*script saveGame(stats.story_code,{characters:{luna:{present:stats.luna_present,int:stats.luna_int,str:stats.luna_str,cha:stats.luna_cha},kiki:{present:stats.kiki_present,int:stats.kiki_int,str:stats.kiki_str,cha:stats.kiki_cha},ruyan:{present:stats.ruyan_present,int:stats.ruyan_int,str:stats.ruyan_str,cha:stats.ruyan_cha}}});
 
 Gave saved!
 *page_break Next
@@ -72,4 +72,3 @@ Warning: this will wipe out all save metrics.
 *set ruyan_str 30
 *set ruyan_cha 20
 *goto_scene storyandchar
-
