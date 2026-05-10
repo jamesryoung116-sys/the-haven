@@ -1,0 +1,5 @@
+#Help the village
+    *set village_progress +10
+    *script saveGame(stats.story_code,{chapter: stats.chapter,village_progress: stats.village_progress,characters: {luna: {intelligence: stats.luna_intelligence,strength: stats.luna_strength,charm: stats.luna_charm},kiki: {intelligence: stats.kiki_intelligence,strength: stats.kiki_strength,charm: stats.kiki_charm}}});
+    You help the village grow.
+    

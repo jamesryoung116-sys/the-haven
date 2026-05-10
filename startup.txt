@@ -1,0 +1,30 @@
+*title The Haven
+*author Jry78
+
+*create chapter 1
+*create village_progress 0
+*create story_code "HAVEN-123"
+
+*create pc ""
+*create rcode 0
+*create role "student"
+*comment 0 = "student", 1 = teacher
+*create he "she"
+*create him "her"
+*create his "her"
+*create boy "girl"
+
+*create luna_present 0
+*create luna_int 30
+*create luna_str 20
+*create luna_cha 25
+*create kiki_present 0
+*create kiki_int 25
+*create kiki_str 25
+*create kiki_cha 30
+*create ruyan_present 0
+*create ruyan_int 20
+*create ruyan_str 30
+*create ruyan_cha 20
+
+*goto_scene storyandchar

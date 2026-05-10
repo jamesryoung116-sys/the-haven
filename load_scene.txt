@@ -1,0 +1,18 @@
+*comment
+*script loadGame(stats.story_code).then(function(data){if(data&&data.village_progress!==undefined){stats.village_progress=data.village_progress;}});
+
+*if village_progress =0
+    *set village_progress 1
+    *comment
+    *script saveGame(stats.story_code,{village_progress:stats.village_progress,characters:{luna:{present:stats.luna_present,int:stats.luna_int,str:stats.luna_str,cha:stats.luna_cha},kiki:{present:stats.kiki_present,int:stats.kiki_int,str:stats.kiki_str,cha:stats.kiki_cha},ruyan:{present:stats.ruyan_present,int:stats.ruyan_int,str:stats.ruyan_str,cha:stats.ruyan_cha}}});
+    *page_break Enter the Haven
+    *goto_scene chapter1
+*else
+    *goto loaddata
+*label loaddata
+Loading the Haven...
+
+*script loadGame(stats.story_code).then(function(data){if(data&&data.characters){stats.luna_present=(data.characters.luna&&data.characters.luna.present)||0;stats.luna_int=(data.characters.luna&&data.characters.luna.int)||0;stats.luna_str=(data.characters.luna&&data.characters.luna.str)||0;stats.luna_cha=(data.characters.luna&&data.characters.luna.cha)||0;stats.kiki_present=(data.characters.kiki&&data.characters.kiki.present)||0;stats.kiki_int=(data.characters.kiki&&data.characters.kiki.int)||0;stats.kiki_str=(data.characters.kiki&&data.characters.kiki.str)||0;stats.kiki_cha=(data.characters.kiki&&data.characters.kiki.cha)||0;stats.ruyan_present=(data.characters.ruyan&&data.characters.ruyan.present)||0;stats.ruyan_int=(data.characters.ruyan&&data.characters.ruyan.int)||0;stats.ruyan_str=(data.characters.ruyan&&data.characters.ruyan.str)||0;stats.ruyan_cha=(data.characters.ruyan&&data.characters.ruyan.cha)||0;}});
+
+*page_break ${story_code) loaded
+*goto_scene chapter1
