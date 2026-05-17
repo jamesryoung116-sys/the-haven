@@ -37,7 +37,7 @@ The Haven is a refuge, made by Great Elves. At the Haven, children are safe can 
         WOW — you are charming.
         *goto c2_choice
 *label c2_choice
-*gosub_scene savesub
+*gosub_scene savesub save
 *page_break
 *goto c1_choice
 

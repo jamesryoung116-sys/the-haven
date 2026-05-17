@@ -1,5 +1,4 @@
 *comment 
-*script loadGame(stats.story_code).then(function(data){if(data&&data.village_progress!==undefined){stats.village_progress=data.village_progress;}});
 
 *if village_progress =0
     *set village_progress 1

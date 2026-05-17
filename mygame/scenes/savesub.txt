@@ -1,4 +1,5 @@
 *label save
+Saving….
 
 *comment 
 *script saveGame(stats.story_code,{village_progress:stats.village_progress,characters:{luna:{present:stats.luna_present,int:stats.luna_int,str:stats.luna_str,cha:stats.luna_cha,owner:stats.luna_owner},kiki:{present:stats.kiki_present,int:stats.kiki_int,str:stats.kiki_str,cha:stats.kiki_cha,owner:stats.kiki_owner},ruyan:{present:stats.ruyan_present,int:stats.ruyan_int,str:stats.ruyan_str,cha:stats.ruyan_cha,owner:stats.ruyan_owner}}});

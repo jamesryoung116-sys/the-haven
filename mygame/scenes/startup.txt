@@ -2,7 +2,7 @@
 *author Jry78
 
 *create chapter 1
-*create village_progress 0
+*create village_progress 1
 *create story_code "HAVEN-123"
 
 *create pc ""
@@ -29,7 +29,5 @@
 *create ruyan_str 30
 *create ruyan_cha 20
 *create ruyan_owner "unclaimed"
-
-*script saveGame("TEST",{hello:"world"});
 
 *goto_scene storyandchar
