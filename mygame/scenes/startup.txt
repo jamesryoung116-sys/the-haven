@@ -30,4 +30,6 @@
 *create ruyan_cha 20
 *create ruyan_owner "unclaimed"
 
+*script saveGame("TEST",{hello:"world"});
+
 *goto_scene storyandchar
