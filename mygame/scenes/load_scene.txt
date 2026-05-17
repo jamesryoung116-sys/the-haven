@@ -1,9 +1,9 @@
-*comment
+*comment 
 *script loadGame(stats.story_code).then(function(data){if(data&&data.village_progress!==undefined){stats.village_progress=data.village_progress;}});
 
 *if village_progress =0
     *set village_progress 1
-    *comment
+    *comment 
     *script saveGame(stats.story_code,{village_progress:stats.village_progress,characters:{luna:{present:stats.luna_present,int:stats.luna_int,str:stats.luna_str,cha:stats.luna_cha},kiki:{present:stats.kiki_present,int:stats.kiki_int,str:stats.kiki_str,cha:stats.kiki_cha},ruyan:{present:stats.ruyan_present,int:stats.ruyan_int,str:stats.ruyan_str,cha:stats.ruyan_cha}}});
     *page_break Enter the Haven
     *goto_scene chapter1
@@ -12,7 +12,8 @@
 *label loaddata
 Loading the Haven...
 
-*script loadGame(stats.story_code).then(function(data){if(data&&data.characters){stats.luna_present=(data.characters.luna&&data.characters.luna.present)||0;stats.luna_int=(data.characters.luna&&data.characters.luna.int)||0;stats.luna_str=(data.characters.luna&&data.characters.luna.str)||0;stats.luna_cha=(data.characters.luna&&data.characters.luna.cha)||0;stats.kiki_present=(data.characters.kiki&&data.characters.kiki.present)||0;stats.kiki_int=(data.characters.kiki&&data.characters.kiki.int)||0;stats.kiki_str=(data.characters.kiki&&data.characters.kiki.str)||0;stats.kiki_cha=(data.characters.kiki&&data.characters.kiki.cha)||0;stats.ruyan_present=(data.characters.ruyan&&data.characters.ruyan.present)||0;stats.ruyan_int=(data.characters.ruyan&&data.characters.ruyan.int)||0;stats.ruyan_str=(data.characters.ruyan&&data.characters.ruyan.str)||0;stats.ruyan_cha=(data.characters.ruyan&&data.characters.ruyan.cha)||0;}});
+*comment 
+*script loadGame(stats.story_code).then(function(data){if(data){if(data.village_progress!==undefined)stats.village_progress=data.village_progress;if(data.characters){if(data.characters.luna){if(data.characters.luna.present!==undefined)stats.luna_present=data.characters.luna.present;if(data.characters.luna.int!==undefined)stats.luna_int=data.characters.luna.int;if(data.characters.luna.str!==undefined)stats.luna_str=data.characters.luna.str;if(data.characters.luna.cha!==undefined)stats.luna_cha=data.characters.luna.cha;if(data.characters.luna.owner!==undefined)stats.luna_owner=data.characters.luna.owner;}if(data.characters.kiki){if(data.characters.kiki.present!==undefined)stats.kiki_present=data.characters.kiki.present;if(data.characters.kiki.int!==undefined)stats.kiki_int=data.characters.kiki.int;if(data.characters.kiki.str!==undefined)stats.kiki_str=data.characters.kiki.str;if(data.characters.kiki.cha!==undefined)stats.kiki_cha=data.characters.kiki.cha;if(data.characters.kiki.owner!==undefined)stats.kiki_owner=data.characters.kiki.owner;}if(data.characters.ruyan){if(data.characters.ruyan.present!==undefined)stats.ruyan_present=data.characters.ruyan.present;if(data.characters.ruyan.int!==undefined)stats.ruyan_int=data.characters.ruyan.int;if(data.characters.ruyan.str!==undefined)stats.ruyan_str=data.characters.ruyan.str;if(data.characters.ruyan.cha!==undefined)stats.ruyan_cha=data.characters.ruyan.cha;if(data.characters.ruyan.owner!==undefined)stats.ruyan_owner=data.characters.ruyan.owner;}}}});
 
-*page_break ${story_code) loaded
+*page_break ${story_code} loaded
 *goto_scene chapter1

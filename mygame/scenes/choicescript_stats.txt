@@ -33,8 +33,7 @@ Current Character: $!{pc}.
     #Reset
         *goto reset1
 *label savegame
-*script saveGame(stats.story_code,{characters:{luna:{present:stats.luna_present,int:stats.luna_int,str:stats.luna_str,cha:stats.luna_cha},kiki:{present:stats.kiki_present,int:stats.kiki_int,str:stats.kiki_str,cha:stats.kiki_cha},ruyan:{present:stats.ruyan_present,int:stats.ruyan_int,str:stats.ruyan_str,cha:stats.ruyan_cha}}});
-
+*gosub_scene savesub
 Gave saved!
 *page_break Next
 *goto statsbegin
@@ -63,12 +62,15 @@ Warning: this will wipe out all save metrics.
 *set luna_int 30
 *set luna_str 20
 *set luna_cha 25
+*set luna_owner "unclaimed"
 *set kiki_present 0
 *set kiki_int 25
 *set kiki_str 25
 *set kiki_cha 30
+*set kiki_owner "unclaimed"
 *set ruyan_present 0
 *set ruyan_int 20
 *set ruyan_str 30
 *set ruyan_cha 20
-*goto_scene storyandchar
+*goto savegame
+

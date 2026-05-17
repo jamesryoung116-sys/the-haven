@@ -1,19 +1,19 @@
 The path is quiet.
 
-Beyond it lies the Haven: A magical refuge for children in need.
+Beyond lies the Haven: A magical refuge for children in need.
 
-Who will change and explore the Haven?
+Who will explore the Haven?
 
 *choice
-    #Luna: A quiet, observant human girl who transforms into a cat.
+    #Luna: A quiet, observant human girl who transforms into a cat (${luna_owner}).
         *set pc "luna"
         *gosub_scene utils gengirl
         *goto_scene load_scene
-    #Kiki: A curious, restless dryad girl.
+    #Kiki: A curious, restless dryad girl (${kiki_owner}).
         *set pc "kiki"
         *gosub_scene utils gengirl
         *goto_scene load_scene
-    #Ruyan: A strong satyr boy.
+    #Ruyan: A strong satyr boy (${ruyan_owner}).
         *set pc "ruyan"
         *gosub_scene utils genboy
         *goto_scene load_scene

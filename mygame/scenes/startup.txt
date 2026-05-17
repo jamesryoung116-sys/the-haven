@@ -18,13 +18,16 @@
 *create luna_int 30
 *create luna_str 20
 *create luna_cha 25
+*create luna_owner "unclaimed"
 *create kiki_present 0
 *create kiki_int 25
 *create kiki_str 25
 *create kiki_cha 30
+*create kiki_owner "unclaimed"
 *create ruyan_present 0
 *create ruyan_int 20
 *create ruyan_str 30
 *create ruyan_cha 20
+*create ruyan_owner "unclaimed"
 
 *goto_scene storyandchar
